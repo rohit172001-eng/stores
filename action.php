@@ -4,6 +4,7 @@ $selected_val = $_POST['comp'];  // Storing Selected Value In Variable
 echo "You have selected :" .$selected_val;
 include 'db_connection.php';
 $conn = OpenCon();
+$count=0;
 echo "<br>";
 echo "Connected to database Successfully"."<br>";
   // Displaying Selected Value
@@ -22,8 +23,10 @@ echo "Connected to database Successfully"."<br>";
           // output data of each row
           while($row = $result->fetch_assoc()) {
               #echo "Borrowed: " . $row["no"]."<br>";
-              $remaining=(int)$total-(int)$row["no"];
-              echo "Available : ".$remaining."<br>";}
+              $count=$count+(int)$row["no"];
+              }
+              $remaining=(int)$total-$count;
+              echo "Available : ".$remaining."<br>";
       }
       else{echo"data not found in records";}
   }

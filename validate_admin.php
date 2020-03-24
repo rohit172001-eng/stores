@@ -1,4 +1,5 @@
 <?php
+session_start();
 function test_input($data) {
   $data = trim($data);
   $data = stripslashes($data);
@@ -21,7 +22,10 @@ echo "Connected to database Successfully"."<br>";
         $result = $conn->query($sql);
         if ($result->num_rows > 0) {
           $_SESSION['uname'] = $uname;
-          header('Location: home.php');
+          if(isset($_SESSION["uname"])) {
+              header('Location: home.php');
+                                      }
+
         }
 
         else

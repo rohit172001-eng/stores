@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -45,6 +48,10 @@
         <input type="number" placeholder="default 1" name="count"><br>
   <input type="submit" name="update" value="Update" />
 <br>
+</form>
+
+<form class="" action="logout.php" method="post">
+<input type="submit" name="logout" value="Logout" />
 </form>
 
   </body>

@@ -33,7 +33,14 @@
     <input type="password" placeholder="Enter Password" name="psw" required>
 <br><br>
     <input type="submit" name="submit1" value="Login" />
+
     </center>
+</form>
+
+<form class="" action="forgot_pass.php" method="post">
+  <center>
+<input type="submit" name="forgot" value="Forgot Password" />
+</center>
 </form>
 
 <br><br>
@@ -42,6 +49,7 @@
   <label for="roll"><b>Enter roll no :  </b></label>
     <input type="text" placeholder="eg : 160218735031" name="rollno" required>
   <input type="submit" name="search1" value="Search" />
+
   <br>
 </form>
 </body>

@@ -6,7 +6,10 @@ session_start();
   <head>
     <meta charset="utf-8">
     <title>HOMEPAGE</title>
-    <h1>welcome to stores......</h1>
+    <?php
+#if($_SESSION["name"]) {
+?>
+    <h1>welcome to stores <?php echo $_SESSION["uname"]; ?></h1>
   </head>
   <body>
     <form action="SearchByRoll.php" method="post">

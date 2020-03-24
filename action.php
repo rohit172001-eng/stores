@@ -14,7 +14,7 @@ echo "Connected to database Successfully"."<br>";
       // output data of each row
       while($row = $result->fetch_assoc()) {
           echo "Total: " . $row["total"]."<br>";
-          $total=$row["total"].<br>;
+          $total=$row["total"];
           echo $total."<br>";
         }
       $sql = "SELECT no FROM data WHERE comp_name='".$_POST['comp']."'";

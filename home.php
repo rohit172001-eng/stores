@@ -44,7 +44,7 @@
       <label for="count"><b>Enter count :  </b></label>
         <input type="number" placeholder="default 1" name="count"><br>
   <input type="submit" name="update" value="Update" />
-
+<br>
 </form>
 
   </body>

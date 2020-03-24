@@ -42,6 +42,7 @@
   <label for="roll"><b>Enter roll no :  </b></label>
     <input type="text" placeholder="eg : 160218735031" name="rollno" required>
   <input type="submit" name="search1" value="Search" />
+  <br>
 </form>
 </body>
 </html>

@@ -1,8 +1,8 @@
 <?php
 if(isset($_POST['search1'])){
-$rollno = $_POST['rollno'];  // Storing Selected Value In Variable
-echo "You have entered :" .$rollno;
 include 'db_connection.php';
+$rollno = clean($_POST['rollno']);  // Storing Selected Value In Variable
+echo "You have entered :" .$rollno;
 $conn = OpenCon();
 echo "<br>";
 echo "Connected to database Successfully"."<br>";

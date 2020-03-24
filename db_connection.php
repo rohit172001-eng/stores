@@ -19,4 +19,12 @@ function CloseCon($conn)
  $conn -> close();
  }
 
+ function clean($value)
+  {
+     $value= htmlspecialchars($value,ENT_QUOTES);
+     $value=strip_tags($value);
+     return $value;
+     #ENT_QUOTES,'UTF_8'
+ }
+
 ?>

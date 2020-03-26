@@ -1,15 +1,30 @@
 <?php
 session_start();
-?>
+$page = $_SERVER['PHP_SELF'];
+$sec = "45";#refreshes after 60 
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <!-- auto refreshing script -->
+    <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
     <meta charset="utf-8">
     <title>HOMEPAGE</title>
     <?php
 #if($_SESSION["name"]) {
 ?>
-    <h1>welcome to stores <?php echo $_SESSION["uname"]; ?></h1>
+    <h1>welcome to stores <?php
+    if(isset($_SESSION['uname'])){
+      echo $_SESSION["uname"];
+    }
+    else{
+      include 'logout.php';
+      destroy();
+      }
+
+    ?></h1>
   </head>
   <body>
     <form action="SearchByRoll.php" method="post">
@@ -55,6 +70,10 @@ session_start();
 
 <form class="" action="logout.php" method="post">
 <input type="submit" name="logout" value="Logout" />
+</form>
+
+<form action="otp_verify.php" method="post">
+<input type="submit" name="otp_verify" value="Verify Number" />
 </form>
 
   </body>

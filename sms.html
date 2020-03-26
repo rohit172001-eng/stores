@@ -1,0 +1,20 @@
+<script type="text/javascript">
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", "https://platform.clickatell.com/messages/http/send?apiKey=tTYQiO0ORcqurKzrjbfebw==&to=916301838078&content=hi", true);
+  xhr.onreadystatechange = function(){
+      if (xhr.readyState == 4 && xhr.status == 200){
+          console.log('success')
+      }
+  };
+  xhr.send();
+</script>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
